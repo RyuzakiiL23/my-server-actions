@@ -1,6 +1,6 @@
-import { deleteTodo } from "@/lib/action";
 import Todo from "@/models/todoModel";
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 export default async function GetTodos() {
   try {
@@ -30,17 +30,7 @@ export default async function GetTodos() {
                 <h3>{todo.todo as string}</h3>
                 <p>{deadLineToDate(todo.todoDeadline)}</p>
               </div>
-              <form action={deleteTodo}>
-                <input
-                  hidden
-                  type="text"
-                  name="id"
-                  defaultValue={todo._id.toString()}
-                />
-                <button className="border rounded px-2 bg-red-400">
-                  delete
-                </button>
-              </form>
+                <DeleteButton id={todo._id.toString()} />
             </div>
           ))}
         </div>
