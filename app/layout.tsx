@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { connectToMongoDB } from "@/lib/db";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +13,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  createTodo,
+  modifyTodo,
 }: Readonly<{
   children: React.ReactNode;
+  createTodo: React.ReactNode;
+  modifyTodo: React.ReactNode;
 }>) {
   connectToMongoDB();
   return (

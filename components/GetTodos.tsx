@@ -22,7 +22,7 @@ export default async function GetTodos() {
 
       // Creating a new Date object from the given string
       return (
-        <div className="w-72 mt-8">
+        <div className="w-72 mt-8 ">
           <h2 className="text-center text-green-400 font-bold mb-4">My Todos</h2>
           {todos.map((todo) => (
             <div key={todo._id} className="flex flex-col items-center gap-2 p-2 border-blue-400 border-2 rounded my-4">
