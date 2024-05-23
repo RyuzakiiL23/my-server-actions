@@ -25,7 +25,7 @@ export default function RootLayout({
           className={`${inter.className} flex relative w-full h-full`}
           suppressHydrationWarning={true}
         >
-          <TodoSide />
+          {/* <TodoSide /> */}
           {children}
         </body>
       </StoreProvider>
